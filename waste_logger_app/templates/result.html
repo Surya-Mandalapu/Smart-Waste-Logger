@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Classification Result</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .card {
+      max-width: 400px;
+      margin: auto;
+    }
+    .img-preview {
+      max-width: 200px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body class="bg-light p-5">
+  <div class="container fade-in">
+    <h1 class="text-center mb-4 text-success" style="font-weight:700; letter-spacing:1px;">Smart Waste Logger</h1>
+    <div class="mb-4">
+      <a href="/" class="btn btn-outline-secondary" data-bs-toggle="tooltip" data-bs-placement="right" title="Back to Home">
+        &larr; Back
+      </a>
+    </div>
+    <div class="container text-center">
+      <h2 class="mb-4">Classification Result</h2>
+      {% if image_path %}
+        <img src="{{ image_path }}" class="img-thumbnail img-preview fade-in" alt="Uploaded Image" style="max-height:200px;" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Your uploaded image" >
+      {% else %}
+        <p class="text-danger">Image not available.</p>
+      {% endif %}
+      <div class="card p-4 shadow-sm fade-in mt-3">
+        <p><strong>Label:</strong> <span data-bs-toggle="tooltip" title="Predicted label">{{ label }}</span></p>
+        <p><strong>Confidence:</strong> <span data-bs-toggle="tooltip" title="Model confidence">{{ confidence }}</span></p>
+        <p><strong>Material:</strong> <span data-bs-toggle="tooltip" title="Detected material">{{ material }}</span></p>
+        <p><strong>Recyclable:</strong> <span data-bs-toggle="tooltip" title="Is this item recyclable?">{{ recyclable }}</span></p>
+        <p><strong>CO₂ Estimate:</strong> <span data-bs-toggle="tooltip" title="Estimated carbon impact">{{ co2 }}</span></p>
+      </div>
+      <div class="mt-4">
+        <a href="/" class="btn btn-success me-2" data-bs-toggle="tooltip" title="Scan another item">Scan Another</a>
+        <a href="/log" class="btn btn-outline-primary" data-bs-toggle="tooltip" title="View your waste log">View Waste Log</a>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    .fade-in {
+      animation: fadeIn 0.7s;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: none; }
+    }
+  </style>
+  <script>
+    // Enable Bootstrap tooltips
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    tooltipTriggerList.forEach(function (tooltipTriggerEl) {
+        new bootstrap.Tooltip(tooltipTriggerEl);
+    });
+  </script>
+</body>
+</html>

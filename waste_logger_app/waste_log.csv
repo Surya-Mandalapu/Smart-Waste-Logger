@@ -1,0 +1,7 @@
+filename,label,material,recyclable,co2_kg
+plastic_bottle.jpg,water_bottle,unknown,False,0.05
+plastic_bottle2.jpg,cocktail_shaker,unknown,False,0.05
+plastic_bottle.jpg,water_bottle,unknown,False,0.05
+plastic_bottle.jpg,water_bottle,plastic,True,0.0828
+plastic_bottle.jpg,water_bottle,plastic,True,0.0828
+plastic_bottle.jpg,water_bottle,plastic,True,0.0828

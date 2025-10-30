@@ -1,0 +1,29 @@
+label,material,recyclable,co2_kg
+plastic bottle,plastic,True,0.0828
+water_bottle,plastic,True,0.0828
+pop_bottle,plastic,True,0.0828
+bottlecap,plastic,True,0.0828
+aluminum can,metal,True,0.05
+tin_can,metal,True,0.05
+can,metal,True,0.05
+glass bottle,glass,True,0.12
+beer_bottle,glass,True,0.12
+wine_bottle,glass,True,0.12
+cardboard box,paper,True,0.03
+carton,paper,True,0.03
+chip bag,multi-material,False,0.06
+snack_bag,multi-material,False,0.06
+styrofoam cup,plastic,False,0.09
+foam_cup,plastic,False,0.09
+banana peel,organic,False,0.02
+apple_core,organic,False,0.02
+plastic_bag,LDPE plastic,False,0.01
+glass,glass,True,0.1
+box,cardboard,True,0.05
+bag,mixed plastic,False,0.03
+paper_towel,paper (used),False,0.02
+toilet_tissue,paper (used),False,0.015
+napkin,paper (used),False,0.015
+plate,coated paper,False,0.02
+cup,coated paper/plastic,False,0.05
+plastic_fork,polystyrene,False,0.01
